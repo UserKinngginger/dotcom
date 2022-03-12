@@ -8,6 +8,370 @@
     <title>Home</title>
   </head>
   <body>
+    <style>
+
+
+
+body {
+  background-color: #27d0e3;
+  color:#000000;font-family:georgia;padding:25px;line-height:18pt;font-size:18px;
+	background-image: url("img/grad.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+
+
+
+.overlay{
+
+      background-image: url("hotline_banner.png");
+      background-repeat: repeat-x;
+      background-attachment: fixed;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:-1000;
+}
+
+
+
+    p, ul, FORM {
+      border-radius: 1px;
+      background: black;
+      background: rgba(10,55,72,0.87);
+      box-shadow: 3px 3px #ff008c;
+      color: #bfc4db;
+      width: 678px;
+      margin: 15px auto;
+      padding: 12px;
+      border: 0 solid black;
+      font-family: "PT Mono", sans-serif;
+      font-size: 13px;
+	    text-align: center;
+	    line-height: 16pt;
+    }
+
+    strong{
+      font-size: 18px;
+      }
+
+      #news {
+      border-radius: 1px;
+      background: black;
+      background: rgba(10,55,72,0.8);
+      box-shadow: 3px 3px #ff008c;
+      color: #bfc4db;
+      width: 678px;
+      margin: 15px auto;
+      padding: 12px;
+      border: 0 solid black;
+      font-family: "PT Mono", sans-serif;
+      font-size: 13px;
+      text-align: left;
+	    line-height: 16pt;
+    }
+
+
+span,  a:link {
+    text-decoration: none;
+    color: #66ccff;
+    font-weight: bold
+              }
+
+a:visited {
+    text-decoration: none;
+    color: #00cc66;
+          }
+
+ a:hover {
+    text-decoration: none;
+    color: #ff008c;
+    transition: 0.4s;
+         }
+
+a:active {
+    text-decoration: underline;
+    color: #66ffff;
+         }
+
+    h1 {
+      color: #00e7fc;
+      margin: 15px auto;
+      text-align: center;
+      width: 700px;
+      font-family: "PT Mono", sans-serif;
+	    font-size: 17px;
+    }
+
+    h2 {
+      border-radius: 2px;
+      background: rgba(10,55,72,0.8);
+      box-shadow: 3px 3px #ff008c;
+      color: #FFFFFF;
+      margin: 5px auto;
+      padding: 5px;
+      text-align: center;
+      width: 500px;
+      font-family: "PT Mono", sans-serif;
+	    font-size: 17px;
+    }
+
+        h3 {
+      border-radius: 2px;
+      background: rgba(10,55,72,0.3);
+      box-shadow: 3px 3px #ff008c;
+      color: #FFFFFF;
+      margin: 5px auto;
+      padding: 5px;
+      text-align: center;
+      text-shadow: 2px 2px #ff008c;
+      width: 600px;
+      font-family: "arial", sans-serif;
+	    font-size: 40px;
+    }
+
+    iframe {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 2px;
+      box-shadow: 3px 3px #ff008c;
+      }
+
+    .center {
+      display: block;
+      width: 640px;
+	    margin: 15px auto;
+	    border: 2px solid black;
+      box-shadow: 3px 3px ##ff008c;
+    }
+
+      .center400 {
+      display: block;
+      width: 400px;
+	    margin: 15px auto;
+	    border: 2px solid black;
+      box-shadow: 3px 3px ##ff008c;
+    }
+
+    .headimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+  animation: blinker 6s linear infinite;
+      }
+
+      .headimg:hover{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px;
+    animation: shake 0.8s linear infinite;
+        }
+
+                  .headimgright{
+       float: right;
+  width: 225px;
+      }
+
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+      @keyframes blinker {
+  50% { opacity: 0.85; }
+}
+
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes marquee-ltr {
+    0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.marquee-rtl {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 678px;
+      margin: 2px auto;
+      padding: 4px;
+	    text-align: center;
+}
+
+.marquee-rtl span {
+  display: inline-block;
+  width: max-content;
+  padding-left: 100%;
+  /* show the marquee just outside the paragraph */
+  will-change: transform;
+  animation: marquee-rtl 90s linear infinite;
+}
+
+.marquee-rtl span:hover {
+  animation-play-state: paused;
+}
+
+.marquee-ltr {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 678px;
+      margin: 2px auto;
+      padding: 4px;
+	    text-align: center;
+}
+
+.marquee-ltr span {
+  display: inline-block;
+  width: max-content;
+  padding-left: 100%;
+  /* show the marquee just outside the paragraph */
+  will-change: transform;
+  animation: marquee-ltr 90s linear infinite;
+}
+
+.marquee-ltr span:hover {
+  animation-play-state: paused;
+}
+
+  .kanji{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 678px;
+      }
+
+          .headimgsmall{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  border: 2px solid ##ff008c;
+      }
+
+            .headimg560{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  border: 2px solid ##ff008c;
+      }
+
+    .buttons{
+  text-align: center;
+      }
+
+    .container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  border-radius: 1px;
+  background: rgba(10,55,72,0.8);
+  box-shadow: 3px 3px #ff008c;
+  overflow: hidden;
+  width:700px;
+  margin: 22px auto;
+  line-height: 2;
+  text-align: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-family: "PT Mono", sans-serif;
+  color: #00fcc1;
+  text-align: center;
+  margin: 22px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ff008c;
+  color: white;
+  padding: 4px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: black;
+  color: #cc33ff;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00ff59;
+  font-family: "Questrial", sans-serif;
+  font-size: 24px;
+  text-shadow: 3px 3px #000;
+  letter-spacing: 7px;
+}
+
+hr{
+  border-top: 1px double #000;
+  width: 700px;
+}
+
+span.b {
+  padding: 3px;
+  background-color: #dd007d;
+  display: inline-block;
+  text-align: left;
+  color: #00fcc1;
+}
+
+span.c {
+  display: inline-block;
+  text-align: left;
+  color: white;
+}
+
+img{
+  border-radius: 4px;
+  margin: 4px;
+}
+
+
+
+
+</style>
     <style type="text/css">
       body {
 
